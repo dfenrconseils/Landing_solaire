@@ -1761,13 +1761,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 /* ✅ TRACKING GTM: lead envoyé */
 window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  event: "lead_submit",
-  event_callback: function() {
-    console.log("lead_submit envoyé à GTM");
-  },
-  event_timeout: 2000
-});
+
+
+setTimeout(function () {
+  window.dataLayer.push({ event: "lead_submit" });
+  console.log("lead_submit push (delay)");
+}, 300);
+
 
 
         showMsg("✅ Envoyé. On vous rappelle rapidement.", "#b7f7d2");

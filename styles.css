@@ -209,10 +209,14 @@ body{
   margin-top:14px;
   display:flex;
   gap:10px;
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
+  align-items:stretch;
+  width:100%;
 }
+
 .mini{
-  width:140px;
+  flex:1;
+  min-width:120px;
   padding:12px 12px;
   border-radius:16px;
   background:rgba(255,255,255,.12);
@@ -220,6 +224,7 @@ body{
   backdrop-filter: blur(10px);
   box-shadow: 0 14px 44px rgba(0,0,0,.18);
 }
+
 .mini__big{
   color:#fff;
   font-weight:1000;
